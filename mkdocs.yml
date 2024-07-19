@@ -1,0 +1,113 @@
+extra_css:
+  - assets/stylesheets/extra.css
+extra:
+  # social:
+  #   - icon: fontawesome/brands/github 
+  #     link: https://github.com/win5923
+  generator: false
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
+site_name: Blocka's Blog
+repo_name: blocka.github.io
+repo_url: https://github.com/win5923/blocka.github.io
+
+# site_url: 
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  icon:
+    logo: material/bookshelf
+    repo: fontawesome/brands/github
+  favicon: assets/book.png
+  font:
+    text: Noto Sans Traditional Chinese
+    code: Roboto Mono
+  features:
+    - navigation.indexes          # When section index pages are enabled, documents can be directly attached to sections, which is particularly useful for providing overview pages.
+    - navigation.instant          # Ref: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.tabs
+    - navigation.sections       # Ref: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link           # Ref: https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs
+    - content.code.annotation
+    - content.code.copy
+    # - navigation.footer
+
+  palette:
+  - scheme: default
+    primary: blue grey # header color
+    accent: deep purple
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    primary: black # main color
+    accent: deep purple
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+      
+
+nav:
+  - Blog:
+    - index.md
+  - About: about.md
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      post_date_format: yyyy/MM/dd
+      authors_file: blog/.authors.yml
+      blog_toc: true
+      authors_profiles: true
+      pagination_per_page: 5
+  - tags
+
+  # - social:
+  #     cards_layout_options:
+  #       font_family: Noto Sans TC
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences # Ref: https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#configuration
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.mark
+  - attr_list # Ref: https://squidfunk.github.io/mkdocs-material/reference/images/#image-alignment-left
+  - md_in_html   # Ref: https://squidfunk.github.io/mkdocs-material/reference/images/#image-alignment-left
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.twemoji
+  - codehilite:
+      css_class: highlight
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences:  # Diagrams Configuration
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
