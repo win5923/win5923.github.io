@@ -1,0 +1,43 @@
+.md-content {
+    --md-typeset-a-color: #09a1dd;
+}
+
+/* Admonition text */
+[data-md-color-scheme="slate"] .md-typeset details {  
+  color: white;
+
+}
+
+[data-md-color-scheme="slate"] .md-nav--integrated>.md-nav__list>.md-nav__item--active .md-nav--secondary {
+  border-left: 0.05rem solid rgb(94,139,222);
+}
+
+[data-md-color-scheme="slate"] .md-typeset td > code {
+  color: #d1b2fd;
+}
+
+.md-typeset td > code {
+  color: #8733fd;
+}
+
+[data-md-color-scheme="slate"] .md-typeset td > code.highlight {
+  color: #f3a464;
+}
+
+.md-typeset td > code.highlight {
+  color: #ff7f16;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead th {
+  border-bottom: 1px solid rgb(101, 149, 249);
+  background-color: rgb(0, 0, 0);
+}
+
+[data-md-color-scheme="slate"] .md-typeset {
+  color: white; 
+}
+
+.md-footer__inner:not([hidden]) {
+  padding: .0rem;
+}
+
